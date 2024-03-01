@@ -23,6 +23,7 @@ for(let i = 1; i <= 100; i++){
 
 
 
+
 // function
 
 function reset(){
@@ -56,4 +57,17 @@ function getOddEventClass(n){
     return'event'
   }
   return 'odd'
+}
+
+function bombeGenera(){
+let arrayBombe = [];
+
+for(let i =0; i<16; i++){
+let bomba = Math.floor(Math.random() * 100) +1;
+arrayBombe.push(bomba);
+
+}
+return arrayBombe;
+
+
 }
