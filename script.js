@@ -3,25 +3,19 @@ const gridContainer = document.querySelector('.my_container');
 let arrayBombe = [];
 //  const btn_genera = document.getElementById('btn_genera');
 
-// btn_genera.addEventListener('click' reset);
+//  btn_genera.addEventListener('click' reset);
 
 
 reset();
 
 for(let i = 1; i <= 100; i++){
   const square = getsquare(i);
+  bombeGenera();
+
   
   gridContainer.append(square);
   let bombs = bombeGenera()
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -38,7 +32,7 @@ function getsquare(numero){
    //(this in questo caso è il mio quadrato è il mio elemento che clicco ricrda che sta dentro a click! NB)
   sq.addEventListener('click', function(){
     console.log(this._sqId)
-    
+    bombeGenera();
     if(this.innerHTML === ''){
       this.innerHTML = this._sqId;
     }else{
@@ -67,13 +61,19 @@ while (arrayBombe.length < 16){
 
   const numeroRandom = Math.floor(Math.random() * 100) +1;
 
+  
   if (! arrayBombe.includes(numeroRandom)){
     arrayBombe.push(numeroRandom);
   }
+  
+  numeroRandom.className ='bomba';
 
 }
 
 return arrayBombe;
 }
+
+
+/////////////
 
 

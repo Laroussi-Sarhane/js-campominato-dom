@@ -33,6 +33,7 @@ header{
 .square.event{
   background-color: rgb(71, 97, 57);
 }
-.square.bomba{
-  background-color: rgb(71, 97, 57);
+.bomb {
+  background-color: red;
+  color: white;
 }
