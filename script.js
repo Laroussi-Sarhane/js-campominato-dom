@@ -1,6 +1,6 @@
 const gridContainer = document.querySelector('.my_container');
  
-
+let arrayBombe = [];
 //  const btn_genera = document.getElementById('btn_genera');
 
 // btn_genera.addEventListener('click' reset);
@@ -12,6 +12,7 @@ for(let i = 1; i <= 100; i++){
   const square = getsquare(i);
   
   gridContainer.append(square);
+  let bombs = bombeGenera()
 }
 
 
@@ -62,12 +63,17 @@ function getOddEventClass(n){
 function bombeGenera(){
 let arrayBombe = [];
 
-for(let i =0; i<16; i++){
-let bomba = Math.floor(Math.random() * 100) +1;
-arrayBombe.push(bomba);
+while (arrayBombe.length < 16){
+
+  const numeroRandom = Math.floor(Math.random() * 100) +1;
+
+  if (! arrayBombe.includes(numeroRandom)){
+    arrayBombe.push(numeroRandom);
+  }
 
 }
+
 return arrayBombe;
-
-
 }
+
+

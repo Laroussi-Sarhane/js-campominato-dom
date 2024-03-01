@@ -27,3 +27,12 @@ header{
 .square.clicked{
   background-color: lightblue;
 }
+.square.odd{
+  background-color: bisque;
+}
+.square.event{
+  background-color: rgb(71, 97, 57);
+}
+.square.bomba{
+  background-color: rgb(71, 97, 57);
+}
